@@ -1,9 +1,10 @@
 #ifndef node_h
 #define node_h
+#include <iostream>
+using namespace std;
 
 class NODE{
-    
-    char data; 
+     char data;
     NODE *nextPtr;
 public:
     NODE(char);
@@ -14,12 +15,10 @@ public:
 };
 typedef NODE* NodePtr;
 
-// Constructor
 NODE::NODE(char x){
     data=x;
     nextPtr=NULL;
 }
-
 NODE* NODE::get_next(){
     return nextPtr;
 }
@@ -31,7 +30,6 @@ char NODE::get_value(){
 void NODE::set_next(NODE *t){
      nextPtr=t;
 }
-
 NODE::~NODE(){
     
 }
