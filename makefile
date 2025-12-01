@@ -1,26 +1,8 @@
 compile: main.cpp
-	g++ main.cpp -o stack1
+	g++ main.cpp -o testQ
 
-run: ./stack1
-	./stack1 
+run: testQ
+	./testQ 1 2 3 2 x 3 2 x
 
-compile2: main2.cpp
-	g++ main2.cpp -o stack2
-
-test1: ./stack2
-	./stack2 {[]}[] {[]] [] {{  }}
-
-test2: ./stack2
-	./stack2 {[]}[]
-
-test3: ./stack2
-	./stack2 {[]
-
-test4: ./stack2
-	./stack2 {[}]
-
-test5: ./stack2
-	./stack2 {{
-
-test6: ./stack2
-	./stack2 {{}}
+clean:
+	rm testQ

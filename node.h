@@ -4,32 +4,40 @@
 using namespace std;
 
 class NODE{
-     char data;
+    int ord_number, qty; 
     NODE *nextPtr;
 public:
-    NODE(char);
+    NODE(int, int);
     ~NODE();
     void set_next(NODE*);
     NODE* get_next();
-    char get_value();
+    int get_ord();
+    int get_qty();
 };
 typedef NODE* NodePtr;
 
-NODE::NODE(char x){
-    data=x;
-    nextPtr=NULL;
+NODE::NODE(int o, int q){
+    ord_number = o;
+    qty = q;
+    nextPtr = NULL;
 }
+
 NODE* NODE::get_next(){
     return nextPtr;
 }
 
-char NODE::get_value(){
-    return data;
+int NODE::get_ord(){
+    return ord_number;
+}
+
+int NODE::get_qty(){
+    return qty;
 }
 
 void NODE::set_next(NODE *t){
      nextPtr=t;
 }
+
 NODE::~NODE(){
     
 }
